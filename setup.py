@@ -6,17 +6,6 @@ with open("README.md", "r", encoding="utf-8") as fh:
 setuptools.setup(
     name="microwakeword",
     version="0.1.0",
-    install_requires=[
-        "audiomentations",
-        "audio_metadata",
-        "datasets",
-        "mmap_ninja",
-        "numpy",
-        "pymicro-features",
-        "pyyaml",
-        "tensorflow>=2.16",
-        "webrtcvad",
-    ],
     author="Kevin Ahrendt",
     author_email="kahrendt@gmail.com",
     description="A TensorFlow based wake word detection training framework using synthetic sample generation suitable for certain microcontrollers.",

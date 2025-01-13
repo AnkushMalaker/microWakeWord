@@ -155,3 +155,5 @@ training_parameters.yaml
 *.flac
 *.wav
 *.mp3
+
+microwakeword-torch/

@@ -11,12 +11,31 @@ authors = [
 description = "A TensorFlow based wake word detection training framework using synthetic sample generation suitable for certain microcontrollers."
 readme = "README.md"
 requires-python = ">=3.10, <3.11"
-dynamic = ["dependencies"]
+dependencies = [
+    "audiomentations",
+    "audio_metadata",
+    "datasets",
+    "mmap_ninja",
+    "numpy",
+    "pymicro-features",
+    "pyyaml",
+    "tensorflow>=2.16",
+    "webrtcvad",
+    "torch>=2.1.0",
+    "torchaudio>=2.1.0",
+    "numpy>=1.24.0",
+    "librosa>=0.10.0",
+    "soundfile>=0.12.0",
+]
 classifiers = [
     "Programming Language :: Python :: 3",
     "License :: OSI Approved :: Apache Software License",
     "Operating System :: OS Independent",
 ]
+
+[tool.setuptools]
+packages = ["microwakeword", "microwakeword_torch"]
+package-dir = {"microwakeword" = "microwakeword", "microwakeword_torch" = "microwakeword-torch"}
 
 [project.urls]
 Homepage = "https://github.com/kahrendt/microWakeWord"
