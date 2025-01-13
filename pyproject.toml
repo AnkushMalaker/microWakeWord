@@ -33,6 +33,15 @@ classifiers = [
     "Operating System :: OS Independent",
 ]
 
+[project.optional-dependencies]
+training-notebook = [
+    "ipykernel",
+    "audio-metadata @ git+https://github.com/whatsnowplaying/audio-metadata@d4ebb238e6a401bb1a5aaaac60c9e2b3cb30929f",
+    "torch",
+    "torchaudio",
+    "piper-phonemize-cross==1.2.1",
+]
+
 [tool.setuptools]
 packages = ["microwakeword", "microwakeword_torch"]
 package-dir = {"microwakeword" = "microwakeword", "microwakeword_torch" = "microwakeword-torch"}
